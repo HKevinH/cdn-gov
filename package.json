@@ -20,7 +20,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "postinstall": "pnpm run build"
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "react": ">=18.0.0 <20.0.0",

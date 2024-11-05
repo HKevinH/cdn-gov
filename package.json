@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Librería de componentes para React basada en estilos de la Gobernación",
   "type": "module",
-  "main": "dist/gov-components.umd.js",
-  "module": "dist/gov-components.es.js",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
   "types": "./dist/types/index.d.ts",
   "files": [
     "dist",

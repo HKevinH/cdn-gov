@@ -4,9 +4,8 @@ import * as path from "path";
 // vite.config.ts
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 export default defineConfig({
-  plugins: [react(), cssInjectedByJsPlugin()],
+  plugins: [react()],
   resolve: {
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "./src") },
@@ -15,6 +14,7 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
+    assetsDir: "assets",
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
       output: {

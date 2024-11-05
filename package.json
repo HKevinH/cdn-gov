@@ -8,8 +8,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "assets",
-    "css"
+    "assets"
   ],
   "keywords": [
     "react",

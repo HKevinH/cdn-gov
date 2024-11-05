@@ -4,25 +4,9 @@ import * as path from "path";
 // vite.config.ts
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { copy } from "vite-plugin-copy";
-
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 export default defineConfig({
-  plugins: [
-    react(),
-    copy({
-      targets: [
-        {
-          src: "src/css",
-          dest: "dist/css",
-        },
-        {
-          src: "src/assets",
-          dest: "dist/assets",
-        },
-      ],
-      hook: "writeBundle",
-    }),
-  ],
+  plugins: [react(), cssInjectedByJsPlugin()],
   resolve: {
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "./src") },

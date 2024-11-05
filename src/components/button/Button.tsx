@@ -1,6 +1,7 @@
 import React, { ButtonHTMLAttributes } from "react";
 
-interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface CustomButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
   variant: "content" | "contour" | "inverted content" | "inverted contour";
 }

@@ -9,8 +9,7 @@
   "files": [
     "dist",
     "assets",
-    "css",
-    "index.ts"
+    "css"
   ],
   "keywords": [
     "react",

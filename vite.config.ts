@@ -1,21 +1,20 @@
 // vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import path from "path";
+import * as path from "path";
+import { fileURLToPath } from "url";
+
+// Definir __dirname en un entorno de módulos ES
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./"),
-    },
-  },
   build: {
     lib: {
       entry: path.resolve(__dirname, "index.ts"),
-      name: "MyGovernacionLibrary",
+      name: "gov-components",
       formats: ["es", "umd"],
-      fileName: (format) => `my-governacion-library.${format}.js`,
+      fileName: (format) => `gov-components.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

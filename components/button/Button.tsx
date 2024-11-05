@@ -1,11 +1,11 @@
-import { React, BaseButtonProps } from "react";
+import React, { ButtonHTMLAttributes } from "react";
 
-interface BaseButtonProps {
-  children: React.ReactNode;
+interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  label: string;
 }
 
-const Button: React.FC<BaseButtonProps> = ({ children, ...props }) => {
-  return <button {...props}>{children}</button>;
+const Button: React.FC<CustomButtonProps> = ({ label, ...props }) => {
+  return <button {...props}>{label}</button>;
 };
 
 export default Button;

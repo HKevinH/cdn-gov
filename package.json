@@ -7,7 +7,8 @@
   "module": "dist/gov-components.es.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.ts"
   ],
   "keywords": [
     "react",

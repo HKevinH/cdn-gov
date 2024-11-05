@@ -30,7 +30,7 @@ export default defineConfig({
     ],
   },
   build: {
-    outDir: "dist/js",
+    outDir: "dist",
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
       output: {
@@ -42,7 +42,6 @@ export default defineConfig({
         format: "es",
         preserveModules: true,
         entryFileNames: "[name].js",
-        dir: "dist/js",
       },
     },
     lib: {

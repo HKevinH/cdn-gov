@@ -1,7 +1,14 @@
 import React from "react";
 
+enum ModalVariant {
+  CONFIRMATION = "confirmated",
+  SUCCESS = "sucess",
+  ERROR = "error",
+  WARNING = "warning",
+}
+
 export interface ModalProps {
-  variant: "confirmacion" | "exito" | "error" | "advertencia";
+  variant: ModalVariant;
   title: string;
   message: string;
   onClose: () => void;
@@ -19,22 +26,22 @@ const Modal: React.FC<ModalProps> = ({
 }) => {
   const getVariantStyles = () => {
     switch (variant) {
-      case "confirmacion":
+      case ModalVariant.CONFIRMATION:
         return {
           iconClass: "modal-confirmation-icon",
           titleClass: "confirmation-govco",
         };
-      case "exito":
+      case ModalVariant.SUCCESS:
         return {
           iconClass: "modal-success-icon",
           titleClass: "success-govco",
         };
-      case "error":
+      case ModalVariant.ERROR:
         return {
           iconClass: "modal-error-icon",
           titleClass: "error-govco",
         };
-      case "advertencia":
+      case ModalVariant.WARNING:
         return {
           iconClass: "modal-warning-icon",
           titleClass: "warning-govco",

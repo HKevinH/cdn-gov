@@ -16,12 +16,6 @@
     "library",
     "gov"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/gov-components.es.js",
-      "require": "./dist/gov-components.umd.js"
-    }
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc --project tsconfig.app.json --declaration --emitDeclarationOnly --outDir dist/types",

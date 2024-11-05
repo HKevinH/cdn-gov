@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc --project tsconfig.json --declaration --emitDeclarationOnly --outDir dist/types",
+    "build": "vite build && tsc",
     "lint": "eslint .",
     "prepare": "npm run build"
   },

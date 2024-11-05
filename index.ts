@@ -6,3 +6,7 @@ import "./css/global.css";
 import "./css/main.css";
 
 export { default as Button } from "./src/components/button/Button";
+export type { CustomButtonProps } from "./src/components/button/Button";
+
+export { default as Modal } from "./src/components/modal/Modal";
+export type { ModalProps } from "./src/components/modal/Modal";
